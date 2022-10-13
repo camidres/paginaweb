@@ -18,7 +18,7 @@ class SubcategorySeeder extends Seeder
     {
         $subcategories = [
 
-              // Salud y medicamentos
+            // Salud y medicamentos
 
             [
                 'name' => 'Alivio del dolor',
@@ -28,15 +28,22 @@ class SubcategorySeeder extends Seeder
             ],
 
             [
-               'name' => 'Cuidado de la vista',
-               'slug' => Str::slug('Cuidado de la vista'),
-               'category_id' => '1'
+                'name' => 'Cuidado de la vista',
+                'slug' => Str::slug('Cuidado de la vista'),
+                'category_id' => '1'
 
-           ],
+            ],
 
             [
                 'name' => 'Dermatologicos',
-                    'slug' => Str::slug('acetaminofen'),
+                'slug' => Str::slug('Dermatologicos'),
+                'category_id' => '1'
+
+            ],
+
+            [
+                'name' => 'Dermatolo',
+                'slug' => Str::slug('Dermatolo'),
                 'category_id' => '1'
 
             ],
@@ -46,14 +53,14 @@ class SubcategorySeeder extends Seeder
 
             [
                 'name' => 'Cosmeticos',
-                    'slug' => Str::slug('Cosmeticos'),
+                'slug' => Str::slug('Cosmeticos'),
                 'category_id' => '2'
 
             ],
 
             [
                 'name' => 'Cuidado de la piel',
-                    'slug' => Str::slug('Cuidado de la piel'),
+                'slug' => Str::slug('Cuidado de la piel'),
 
                 'category_id' => '2'
 
@@ -62,7 +69,7 @@ class SubcategorySeeder extends Seeder
 
             [
                 'name' => 'Dermatologicos',
-                    'slug' => Str::slug('acetaminofen'),
+                'slug' => Str::slug('Dermatologicos'),
 
                 'category_id' => '2'
 
@@ -70,7 +77,7 @@ class SubcategorySeeder extends Seeder
 
             [
                 'name' => 'Accesorios de belleza',
-                    'slug' => Str::slug('acetaminofen'),
+                'slug' => Str::slug('Accesorios de belleza'),
 
                 'category_id' => '2'
 
@@ -82,7 +89,7 @@ class SubcategorySeeder extends Seeder
 
             [
                 'name' => 'Higiene del bebe',
-                    'slug' => Str::slug('Higiene del bebe'),
+                'slug' => Str::slug('Higiene del bebe'),
 
                 'category_id' => '3'
 
@@ -90,7 +97,7 @@ class SubcategorySeeder extends Seeder
 
             [
                 'name' => 'Formulas infantiles',
-                    'slug' => Str::slug('Formulas infantiles'),
+                'slug' => Str::slug('Formulas infantiles'),
 
                 'category_id' => '3'
 
@@ -98,7 +105,7 @@ class SubcategorySeeder extends Seeder
 
             [
                 'name' => 'Pañales y pañitos humedos',
-                    'slug' => Str::slug('Pañales y pañitos humedos'),
+                'slug' => Str::slug('Pañales y pañitos humedos'),
 
                 'category_id' => '3'
 
@@ -110,7 +117,7 @@ class SubcategorySeeder extends Seeder
 
             [
                 'name' => 'Cuidado de la piel ',
-                    'slug' => Str::slug('Cuidado de la piel'),
+                'slug' => Str::slug('Cuidado de la piel'),
 
                 'category_id' => '4'
 
@@ -118,7 +125,7 @@ class SubcategorySeeder extends Seeder
 
             [
                 'name' => 'Cuidado del cabello',
-                    'slug' => Str::slug('cuidado del cabello'),
+                'slug' => Str::slug('cuidado del cabello'),
 
                 'category_id' => '4'
 
@@ -126,7 +133,7 @@ class SubcategorySeeder extends Seeder
 
             [
                 'name' => 'Cuidado bucal',
-                    'slug' => Str::slug('Cuidado bucal'),
+                'slug' => Str::slug('Cuidado bucal'),
 
                 'category_id' => '4'
 
@@ -149,4 +156,4 @@ class SubcategorySeeder extends Seeder
         }
     }
 }
-// ->first() estaba despues de subcategoria 
+// ->first() estaba despues de subcategoria

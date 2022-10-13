@@ -86,7 +86,7 @@
                         </x-jet-dropdown-link>
 
                         <x-jet-dropdown-link href="{{ route('register') }}">
-                            {{ __('Registrar') }}
+                            {{ __('Registrarse') }}
                         </x-jet-dropdown-link>
 
 
@@ -126,8 +126,7 @@
 
                             </a>
 
-                            <div
-                                class="navigation-submenu bg-gray-100 border-t-4 border-emerald-300 w-3/4 h-full  hidden">
+                            <div class="navigation-submenu bg-gray-100 border-t-4 border-emerald-300 w-3/4 h-full  hidden">
 
                                 <x-navigation-subcategories :category="$category" />
                             </div>
