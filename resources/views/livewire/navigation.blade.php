@@ -1,5 +1,5 @@
 <header class="bg-white top-0 sticky " style="z-index: 900" x-data="dropdown()">
-    <div class=" flex items-center h-16 justify-between md:justify-start">
+    <div class=" container flex items-center h-16 justify-between md:justify-start">
 
 
 
@@ -114,7 +114,7 @@
 
         <nav class="container " style="z-index: 900">
 
-            <div x-on:click.away="close()" class="">
+            <div class="">
 
                 <ul class="flex  text-sm font-medium md:flex-row md:space-x-8 md:mt-0">
                     @foreach ($categories as $category)

@@ -7,8 +7,8 @@
                     <ul class="slides">
 
                         @foreach ($product->images as $image)
-                            <li data-thumb="{{ Storage::url($image->url) }}">
-                                <img src="{{ Storage::url($image->url) }}" />
+                            <li class="h-11" data-thumb="{{ Storage::url($image->url) }}">
+                                <img class="h-10" src="{{ Storage::url($image->url) }}" />
                             </li>
                         @endforeach
 
@@ -100,7 +100,7 @@
                     <a class="text-gray-600 hover:text-blue-400 underline ml-6" href="">51 Reseñas</a>
                 </div>
 
-                <p class="text-2xl font-semibold text-gray-800 my-4">$ {{ $product->price }} Pesos</p>
+                <p class="text-2xl font-semibold text-gray-800 my-4">$ {{ number_format($product->price) }} Pesos</p>
 
                 <div class=" bg-white rounded-lg shadow-lg mb-6">
                     <div class="p-4 flex items-center">

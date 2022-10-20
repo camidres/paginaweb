@@ -142,7 +142,7 @@
                 {{-- Precio --}}
                 <div>
                     <x-jet-label value="Precio" />
-                    <x-jet-input wire:model="product.price" type="number" class="w-full" {{-- step=".01" --}} />
+                    <x-jet-input wire:model="product.price" type="number" class="w-full" step=".001" />
                     <x-jet-input-error for="product.price" />
                 </div>
             </div>

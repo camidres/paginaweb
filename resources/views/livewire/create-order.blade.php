@@ -175,7 +175,7 @@
 
                             <p>cant: {{ $item->qty }}</p>
 
-                            <p>$ {{ $item->price }}</p>
+                            <p>$ {{ number_format($item->price)   }}</p>
 
                         </article>
                     </li>
@@ -204,7 +204,7 @@
                         @if ($envio_type == 1 || $shipping_cost == 0)
                             Gratis
                         @else
-                            $ {{ $shipping_cost }}
+                            $ {{ number_format($shipping_cost) }}
                         @endif
                     </span>
                 </p>

@@ -51,50 +51,53 @@
                         <li class="bg-white rounded-lg shadow">
                             <article>
                                 <figure>
-                                    <img class="h-48 w-full object-cover object-center" src="{{ Storage::url($product->images->first()->url) }}" alt="">
+                                    <a href="{{ route('products.show', $product) }}">
+                                        <img class="h-48 w-full object-cover object-center"
+                                            src="{{ Storage::url($product->images->first()->url) }}" alt="">
+
+                                    </a>
                                 </figure>
 
                                 <div class="py-4 px-6">
-                                        <h1 class="text-lg font-semibold">
-                                            <a href="{{ route('products.show', $product) }}">
-                                                {{Str::limit($product->name, 20)}}
-                                            </a>
-                                        </h1>
+                                    <h1 class="text-lg font-semibold">
+                                        <a href="{{ route('products.show', $product) }}">
+                                            {{ Str::limit($product->name, 20) }}
+                                        </a>
+                                    </h1>
 
-                                        <p class="font-bold text-trueGray-700">$ {{$product->price}}</p>
+                                    <p class="font-bold text-green-500">$ {{ number_format($product->price) }}</p>
                                 </div>
                             </article>
                         </li>
 
                     @empty
                         <li class="md:col-span-2 lg:col-span-4">
-                            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+                                role="alert">
                                 <strong class="font-bold">Upss!</strong>
                                 <span class="block sm:inline">No existe ningún producto con ese filtro.</span>
                             </div>
                         </li>
                     @endforelse
                 </ul>
-
             @else
                 <ul>
                     @forelse ($products as $product)
-
                         <x-product-list :product="$product" />
 
                     @empty
 
-                        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+                            role="alert">
                             <strong class="font-bold">Upss!</strong>
                             <span class="block sm:inline">No existe ningún producto con ese filtro.</span>
                         </div>
-
                     @endforelse
                 </ul>
             @endif
 
             <div class="mt-4">
-                {{$products->links()}}
+                {{ $products->links() }}
             </div>
         </div>
 

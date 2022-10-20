@@ -42,7 +42,7 @@ class EditProduct extends Component
 
         $this->category_id = $product->subcategory->category->id;
 
-        $this->subcategories = Subcategory::where('category_id', $this->category_id)->get();
+        $this->subcategories = subcategory::where('category_id', $this->category_id)->get();
 
         $this->slug = $this->product->slug;
 
@@ -56,7 +56,7 @@ class EditProduct extends Component
     }
 
     public function updatedCategoryId($value){
-        $this->subcategories = Subcategory::where('category_id', $value)->get();
+        $this->subcategories = subcategory::where('category_id', $value)->get();
 
         $this->brands = Brand::whereHas('categories', function(Builder $query) use ($value){
             $query->where('category_id', $value);
@@ -73,7 +73,7 @@ class EditProduct extends Component
 
 
     public function getSubcategoryProperty(){
-        return Subcategory::find($this->product->subcategory_id);
+        return subcategory::find($this->product->subcategory_id);
     }
 
     public function save(){

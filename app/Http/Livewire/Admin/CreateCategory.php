@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\Brand;
-use App\Models\Category;
+use App\Models\category;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 
@@ -80,7 +80,7 @@ class CreateCategory extends Component
     }
 
     public function getCategories(){
-        $this->categories = Category::all();
+        $this->categories = category::all();
     }
 
     public function save(){

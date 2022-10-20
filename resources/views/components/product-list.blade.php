@@ -14,7 +14,7 @@
                     <h1 class="text-lg font-semibold text-gray-700">
                         {{ $product->name }}
                     </h1>
-                    <p class="font-bold text-green-500">$ {{ $product->price }} Pesos</p>
+                    <p class="font-bold text-green-500">$ {{ number_format($product->price)  }} Pesos</p>
 
                 </div>
 

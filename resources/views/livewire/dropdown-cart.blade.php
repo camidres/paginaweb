@@ -1,6 +1,6 @@
-<div>
+<div >
 
-    <x-jet-dropdown width="96">
+    <x-jet-dropdown class="" width="96">
 
         <x-slot name="trigger">
 
@@ -25,7 +25,7 @@
 
             <ul>
                 @forelse (Cart::content() as $item)
-                    <li class="flex p-2 border-b border-trueGray-500">
+                    <li class=" flex p-2 border-b border-trueGray-500">
                         <img class=" w-20 h-20 object-cover mr-4" src="{{ $item->options->image }}" alt="">
 
                         <article class="flex-1">
